@@ -1,4 +1,4 @@
-// 1. fill suitable variable vlaues //
+// 1. fill suitable variable vlaues  //
 
 const isBoy = true;         // boolean
 const name = "Abhi"         // string

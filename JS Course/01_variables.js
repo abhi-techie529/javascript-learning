@@ -25,7 +25,7 @@ var myObject = {
  
 
 
- //*************** var , let , const  **********//
+ //*************** var , let , const  ***********//
 
  const accountId = 1344;
  let accountEmail = "abhi@gmail.com"
