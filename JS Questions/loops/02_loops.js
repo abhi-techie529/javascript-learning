@@ -6,7 +6,13 @@
 const inputNumber = 4;
 let i = 1;
 let result = 1;
+// result = 1 * 1 = 1
+// result = 1 * 2 = 2
+// result = 2 * 3 = 6
+// result = 6 * 4 = 24
 for( i = 1; i <= inputNumber ; i++){
     result = result * i ;
 }
 console.log("factorail of " + inputNumber + " = ",result);
+
+// output :- 24 
