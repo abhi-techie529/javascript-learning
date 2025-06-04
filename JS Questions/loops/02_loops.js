@@ -13,6 +13,7 @@ let result = 1;
 for( i = 1; i <= inputNumber ; i++){
     result = result * i ;
 }
-console.log("factorail of " + inputNumber + " = ",result);
+
+console.log(`factorial of ${inputNumber} = ${result}`);
 
 // output :- 24 
