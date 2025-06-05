@@ -1,0 +1,2 @@
+const Case = "HE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.IF THE DOG BARKED ,WAS IT REALLY LAZY ?"
+console.log(Case.toLowerCase());
