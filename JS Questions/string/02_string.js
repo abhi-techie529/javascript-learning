@@ -10,4 +10,8 @@ console.log(Case.toLowerCase());
 
 // Problwm 3 , check "fox" is in the string or not
 
-console.log(Case.includes("FOX"));
+console.log(Case.includes("FOX"));  //output :- true , means exist
+
+// Problwm 4 , check "?" is in the string or not
+
+console.log(Case.includes("?"));  //output :- true , means exist
