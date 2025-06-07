@@ -109,7 +109,7 @@ for (let key in student1){
 }
 
 
-// =>  for print values
+// =>  for - of loop ,print values
 
 for(let studenValue of Object.values(student1)){
     console.log(studenValue);
