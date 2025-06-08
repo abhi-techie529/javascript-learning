@@ -8,17 +8,22 @@ since having 25-> ₹1 coin, 20-> ₹2 coin, 5-> ₹5 coin and 5-> ₹10 coin + 
 
 */
 
-//  const coins =[25,20,5,5]
+ const coins =[25,20,5,5]
 
-//  const amountNeedToPay = 120
+ const amountNeedToPay = 120
 
-//  function enoughCoin(coins, amountNeedToPay) {
-//     return (coins[0] + coins[1]*2 + coins[2]*5 + coins[3]*10)
-//  }
-//  console.log(enoughCoin(coins ,amountNeedToPay));
+ function enoughCoin(coins, amountNeedToPay) {
+    return (coins[0] + coins[1]*2 + coins[2]*5 + coins[3]*10)
+ }
+ console.log(enoughCoin(coins ,amountNeedToPay));
 
 
-  const coins =[25,20,5,5]
+
+ // another method 
+
+ /*
+
+   const coins =[25,20,5,5]
 
  const amountNeedToPay = 120
 
@@ -54,3 +59,5 @@ since having 25-> ₹1 coin, 20-> ₹2 coin, 5-> ₹5 coin and 5-> ₹10 coin + 
   }
 
   console.log(enoughCoin(coins ,amountNeedToPay));
+
+  */
