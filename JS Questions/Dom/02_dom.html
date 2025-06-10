@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <style>
+         button {
+            padding: 20px;
+            font-size: 20px;
+            min-width: 100px;
+         }
+         .on{
+            background-color: orange;
+         }
+         .off{
+            background-color: grey;
+            color: white;
+         }
+    </style>
+</head>
+<body>
+     <button id="btn" class="on">ON</button>
+
+     <script>
+
+        const btnEl = document.getElementById("btn")
+
+        function toggleBtn() {
+
+            if (btnEl.classList[0] === "on"){
+                btnEl.classList.remove("on")
+                btnEl.classList.add("off")
+                btnEl.innerHTML = "OFF"
+            }
+            else {
+                  btnEl.classList.remove("off")
+                btnEl.classList.add("on")
+                btnEl.innerHTML = "ON"
+            }
+        }
+
+        btnEl.addEventListener("click",toggleBtn)
+     </script>
+</body>
+</html>
