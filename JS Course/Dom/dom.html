@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .active{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- /*  This is also a node  */ -->
+     <header data-new="coding" id="hello" style="background-color: red;">
+          <nav class="common">
+            <ul>
+                <li class="active demo">Home</li>
+                <li>About </li>
+                <li>Contact</li>
+            </ul>
+          </nav>
+     </header>
+
+     <main class="common">
+        <button id="changeBtn" >Color Change</button>
+        <!-- <button id="changeBtn" onclick="alertMe()">Color Change</button> -->
+        <!-- <h1 name ="sample">This is text 0</h1>
+        <h1 name ="sample">This is text 1</h1> -->
+     </main>
+
+     <footer class="common"> This footer text </footer>
+
+     <script>
+        // console.log(document.body.parentNode);
+        // console.log(document.body.childNodes);
+        // console.log(document.body.childNodes[3].childNodes[1].childNodes[1]);
+        // console.log(document.body.firstChild);
+        // console.log(document.body.lastChild);
+        
+
+
+    //**************** how to access element nodes *********//
+
+    //  console.log(document.body.firstElementChild. firstElementChild.firstElementChild); 
+
+    // console.log(document.body.children[1].previousElementSibling);
+// its for header , if we access nect sibling than we write ( nextElementSibling )   
+
+
+
+//************ how to access element using id **************//
+
+// console.log(document.getElementById("hello"));
+// console.log(document.getElementsByClassName("common"));
+// console.log(document.getElementsByName("sample")[1]);
+// console.log(document.getElementsByTagName("footer"));
+
+
+
+
+
+
+
+
+
+
+//************** Query Selector ***************//
+
+// console.log(document.querySelector("#hello"));
+// console.log(document.querySelector(".common"));
+// console.log(document.querySelector("footer"));
+
+ 
+
+// const commonElements = document.querySelectorAll(".common");  // it gives us a list where .common is used  , It is an object so we can convert this in an object 
+
+/*
+for (let common of commonElements){
+    console.log(common);
+}
+
+// this is the way to conver object to array
+const convertedCommonElements = Array.from(commonElements) 
+
+*/
+
+/*
+const commonElements = document.querySelectorAll("ul > li:first-child");
+
+console.log(commonElements[0].innerHTML);
+*/
+
+
+
+
+
+
+
+
+
+//*********** get value by attribute **********//
+
+
+// 1.=> getAttribute :- it will return atttribute values
+
+/*
+const attribute = document.getElementById("hello").getAttribute("style");
+console.log(attribute);
+*/
+
+// 2. => setAttribute :- for setting own attribute
+
+/*
+const attribute = document.getElementById("hello")
+.getAttribute("style");
+document.getElementById("hello").setAttribute("data-random" , 5);
+console.log(attribute);
+*/
+
+//3. removeAttribute :- for removing attribute
+
+/*
+const attribute = document.getElementById("hello")
+.getAttribute("style");
+document.getElementById("hello").setAttribute("data-random" , 5);
+// document.getElementById("hello").removeAttribute("data-random" , 5);
+
+console.log(document.getElementById("hello").dataset.new); // another way to access the attribute values
+
+*/
+
+
+
+
+//************ Operations we can perform on element nodes ******//
+
+/*
+
+const newFooterText = "This is new text"
+
+const heading = document.createElement("h1");   // (i) creatElement :- for creating new element use this syntax
+const text = document.createTextNode("I am a base") //(ii) createTextNode :- for creating text element we use this syntax
+const text1 = document.createTextNode("Hi , guys")
+
+heading.append(text)      //(iii) .append :- for attaching element at the end of other element (inside)
+heading.prepend(text1)    //(iv) .prepend :- for attaching element at start of element (inside)
+
+const footer = document.getElementsByTagName("footer")[0]
+
+// footer.before(heading); //(v) before:- for attaching element , before other element  , by using this element comes before the heading
+
+footer.after(heading); //(vi) after:- for attaching element , after other element ,by using this element comes after the heading
+
+
+footer.replaceWith(newFooterText);  // (vii) .replaceWith :- by using this we can replace element with other element 
+
+// document.getElementsByTagName("hello")[0].remove(); // (viii) .remove():- for removing element 
+
+// console.log(heading);
+
+*/
+
+
+
+//********** how to remove classed from element *********** //
+
+// const listItems = document.getElementsByTagName("li")
+
+// listItems[0].classList;
+
+// console.log(listItems[0].classList.remove("active"));   // remove class
+// listItems[0].classList.add("active")  // add class
+
+
+// listItems[0].classList.toggle("active")  // toggle :- add or remove it works for both , first time use add , 2nd time use remove
+// listItems[0].classList.toggle("active")  // toggle :- add or remove it works for both , first time use add , 2nd time use remove
+
+
+
+
+
+
+
+
+//*********** html code add ************* //
+
+/*
+const manyhtmlCode = ` <nav class="common">
+            <ul>
+                <li class="active demo">Home</li>
+                <li>About </li>
+                <li>Contact</li>
+            </ul>
+          </nav>`;
+          document.getElementsByTagName("footer").innerHtml = manyhtmlCode    // (ix) .innerHtml :- for adding html inside other element 
+console.log(manyhtmlCode);
+
+// (x)  .outerHtml :- for adding html outside
+
+
+*/
+
+
+
+
+
+
+//**************** Events ********************* //
+
+// function alertMe(){
+//     alert ("you are doing wrong")
+// }      // when we click on the button it gives us a alert message., but its not a good method because everytime we need to change it in the body if we want to change it 
+
+
+const changeBtn1 = document.getElementById("changeBtn")
+
+changeBtn1.addEventListener("click" , () => {
+    alert("You are doing wrong")
+})
+     </script>
+</body>
+</html>
