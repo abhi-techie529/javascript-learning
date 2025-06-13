@@ -1,6 +1,6 @@
 //*************** Syncronous Programming *************//
 
-
+ 
 // console.log("Get");
 // console.log("Set");
 // console.log("Ready");
@@ -50,7 +50,25 @@
 
 
 
+//************ another callback example ***************//
 
+
+/*
+
+function fetchData(callback){
+    setTimeout(() => {
+        const data = [1,2,3,4];
+        callback(data)
+    }, 2000);
+}
+
+function processData(data){
+    console.log(data.map((item) => item * 2));
+}
+
+fetchData(processData);       // pass processData function as a callback
+
+*/
 
 
 
@@ -140,6 +158,11 @@ channel.then((data) => {
 
 */
 
+//1.) if we triggered the ( resolve) part at that moment ( . then ) is triggered
+//2.) if we triggered the ( reject) part at that moment ( .catch ) is triggered
+
+
+
 
 
 
@@ -225,13 +248,13 @@ const p3 = new Promise((resolve,reject) => {
 
     setTimeout(() => {
         reject(" Promise 3 success")
-    },3000)
+    },2000)
 })
 const p4 = new Promise((resolve,reject) => {
 
     setTimeout(() => {
         reject(" Promise 4 success")
-    },4000)
+    },3000)
 })
 
 */
@@ -267,18 +290,20 @@ promises
 
 //in this whose time more that one print late and if anyone has less time than it will print first , same for in case of error , if error occurs first than print first 
 
-// const promises = Promise.allSettled([p3,p4]);
+// const promises = Promise.race([p3,p4]);
 
 // promises
 // .then((data) => {
 //     console.log(data);
 // })
+// .catch((error) => console.log(error));
 
 
 
 //************** Promise Any ****************//
 
 // in this if all promises are rejected than it will print (.catch) block and if any of them resolve than it gives ( .then ) block
+
 
 // const promises = Promise.any([p1,p2,p3,p4]);
 
@@ -343,7 +368,7 @@ $ node 01_async.js
 /*
 
 const channelNameAsync = async () => {
-    throw "Hello ,I am Abhi"            // throw trigger " "reject" and return trigger the " resolve "       
+    throw "Hello ,I am Abhi"            //( throw ) trigger " "reject" and ( return ) trigger the " resolve "       
 }
 
 channelNameAsync()
@@ -380,7 +405,7 @@ const fetchDataAsync = async() => {
 
 async function processData() {
     try{
-        const data = await fetchDataAsync();
+        const data = await fetchDataAsync();    // await:- it waits in the background for the data
         console.log(data);
     } catch(error) {
         console.log(error);
@@ -394,6 +419,7 @@ processData();
 
 //************** Error Object **************//
 
+/*
 
 const fetchDataAsync = async() => {
     const error = true ;
@@ -419,3 +445,5 @@ async function processData() {
 }
 
 processData();
+
+*/  
